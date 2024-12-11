@@ -14,9 +14,9 @@ number = number / 10;
 reversedNumber = reversedNumber * 10 + temp;
 }
 if(numbers[i] == reversedNumber)
-System.out.println(numbers[i] + " is a palindrome");
+System.out.println(numbers[i] + " is an palindrome");
 else
-System.out.println(numbers[i] + " not a palindrome ");
+System.out.println(numbers[i] + " not an palindrome ");
 }
 }
 }
