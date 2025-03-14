@@ -1,22 +1,24 @@
-class PalindromeNumber 
-{
-public static void main(String[] args) 
-{
-int numbers[] = new int[]{131,33,57,98,69};
-for(int i=0; i < numbers.length; i++){
-int number = numbers[i];
-int reversedNumber = 0;
-int temp=0;
-while(number > 0)
-{
-temp = number % 10;
-number = number / 10;
-reversedNumber = reversedNumber * 10 + temp;
+public class Main {
+    public static void bubbleSort(int arr[]) {
+        int n = arr.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+    }
+
+    public static void main(String args[]) {
+        int arr[] = {64, 34, 25, 12, 22, 11, 90};
+        bubbleSort(arr);
+        System.out.println("Sorted array: ");
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+    }
 }
-if(numbers[i] == reversedNumber)
-System.out.println(numbers[i] + " is an palindrome");
-else
-System.out.println(numbers[i] + " not an palindrome ");
-}
-}
-}
+
